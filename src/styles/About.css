@@ -1,0 +1,37 @@
+.about-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #222;
+    line-height: 1.6;
+}
+
+.about-hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    object-fit: cover;
+}
+
+.about-content h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #4a3c31;
+    /* subtle earthy tone */
+}
+
+.about-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #6d4c41;
+    /* earthy accent */
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}

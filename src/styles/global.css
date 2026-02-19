@@ -1,0 +1,21 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styling */
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: #f7f6f4;
+    color: #2d2d2d;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    letter-spacing: 1px;
+}
