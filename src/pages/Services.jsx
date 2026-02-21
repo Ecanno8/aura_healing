@@ -1,68 +1,83 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Services.css";
 
-export default function ServicesPage() {
+// images from public folder
+const service1Img = "/images/IMG_7804_websize.jpg";
+const service2Img = "/images/IMG_7774_websize.jpg";
+const service3Img = "/images/IMG_8011_websize.jpg";
+
+export default function Services() {
+    const [openIndex, setOpenIndex] = useState(null);
+
+    const toggleCard = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
+
     const services = [
         {
-            id: 1,
-            title: "Reiki Energy Healing",
-            price: "$111",
-            img: "/images/IMG_7804_websize.jpg",
-            description: `I offer a quiet and safe space where you are invited to deeply relax, reconnect, 
-      and realign. Each session begins with a fifteen-minute consultation where we explore your current 
-      life state and I intuitively tune into your energy. From there we step forward into a meditative 
-      state of presence, gently opening the pathways of your mind, body, and spirit as I channel 
-      life-force energy through Reiki. Guided by intuitive gentle touch and ancestral wisdom to support, 
-      restore, and release.`,
-            calendly: "https://calendly.com/your-client",
+            title: "Limpia Energy Cleansing",
+            price: "$120",
+            image: service1Img,
+            short:
+                "A traditional spiritual cleansing to remove stagnant or heavy energy.",
+            full:
+                "This session includes a full energetic scan, egg limpia cleansing, grounding integration, and guidance on maintaining energetic protection after your session. Clients often report feeling lighter, calmer, and more centered."
         },
         {
-            id: 2,
-            title: "Chakra Bracelet Workshop",
-            price: "$44",
-            img: "/images/IMG_7774_websize.jpg",
-            description: `The Chakra Bracelet Workshop offers a welcoming, communal space for like-minded 
-      individuals on their healing journeys. You’ll receive foundational insight into how the chakra 
-      system functions on emotional and spiritual levels. Through guided reflection and shared 
-      storytelling, participants create a personalized chakra bracelet with intention. Minimum 5, 
-      maximum 10 participants.`,
-            calendly: "https://calendly.com/your-client",
+            title: "Aura Reading",
+            price: "$95",
+            image: service2Img,
+            short:
+                "Insight into your emotional, spiritual, and energetic state.",
+            full:
+                "During this reading we explore your energetic field, emotional blocks, intuitive messages, and patterns currently influencing your life path. You will leave with clarity and practical grounding suggestions."
         },
         {
-            id: 3,
-            title: "Somatic Healing / TRE™",
-            price: "$222",
-            img: "/images/IMG_8011_websize.jpg",
-            description: `Services coming soon. TRE™ (Tension & Trauma Releasing Exercises) helps the 
-      body release deep patterns of stress, tension, and trauma. Consists of gentle exercises that 
-      fatigue muscles so neurogenic tremors naturally release tension. Benefits: reduce stress, 
-      release muscular tension, improve sleep, support emotional resilience, feel more grounded.`,
-            calendly: "https://calendly.com/your-client",
-        },
+            title: "Chakra Balancing",
+            price: "$110",
+            image: service3Img,
+            short:
+                "Realign and harmonize your body's energetic centers.",
+            full:
+                "Using guided intention, grounding techniques, and energy work, each chakra is gently balanced to restore flow. This session supports emotional stability, relaxation, and energetic alignment."
+        }
     ];
 
     return (
         <div className="services-page">
-            <h1>Our Services</h1>
+            <h1 className="services-title">Services</h1>
+
             <div className="services-grid">
-                {services.map((service) => (
-                    <div key={service.id} className="service-card">
-                        <img src={service.img} alt={service.title} />
-                        <div className="service-info">
-                            <h2>{service.title}</h2>
-                            <p>{service.description}</p>
-                            <div className="service-footer">
-                                <span className="price">{service.price}</span>
-                                <a
-                                    href={service.calendly}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="book-btn"
-                                >
-                                    Book
-                                </a>
-                            </div>
+                {services.map((service, index) => (
+                    <div className="service-card" key={index}>
+                        <img src={service.image} alt={service.title} />
+
+                        <h3>{service.title}</h3>
+                        <p className="price">{service.price}</p>
+
+                        <p className="preview">{service.short}</p>
+
+                        <div className={`full-text ${openIndex === index ? "open" : ""}`}>
+                            <p>{service.full}</p>
                         </div>
+
+                        <button
+                            className="read-more"
+                            onClick={() => toggleCard(index)}
+                        >
+                            {openIndex === index
+                                ? "Hide description"
+                                : "Read full description"}
+                        </button>
+
+                        <a
+                            className="book-btn"
+                            href="https://calendly.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Book
+                        </a>
                     </div>
                 ))}
             </div>
