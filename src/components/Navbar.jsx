@@ -1,15 +1,15 @@
 import React from "react";
 import "../styles/Navbar.css";
 
-export default function Navbar({ brand }) {
+export default function Navbar() {
     return (
         <nav className="navbar">
-            <div className="navbar-brand">{brand}</div>
-            <ul className="navbar-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/services">Services</a></li>
-            </ul>
+            <a href="/" className="brand">Aura Healing</a>
+            <div className="nav-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/services">Services</a>
+            </div>
         </nav>
     );
 }

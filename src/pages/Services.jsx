@@ -1,83 +1,67 @@
 import React, { useState } from "react";
 import "../styles/Services.css";
 
-// images from public folder
-const service1Img = "/images/IMG_7804_websize.jpg";
-const service2Img = "/images/IMG_7774_websize.jpg";
-const service3Img = "/images/IMG_8011_websize.jpg";
-
 export default function Services() {
-    const [openIndex, setOpenIndex] = useState(null);
-
-    const toggleCard = (index) => {
-        setOpenIndex(openIndex === index ? null : index);
-    };
-
     const services = [
         {
-            title: "Limpia Energy Cleansing",
-            price: "$120",
-            image: service1Img,
-            short:
-                "A traditional spiritual cleansing to remove stagnant or heavy energy.",
-            full:
-                "This session includes a full energetic scan, egg limpia cleansing, grounding integration, and guidance on maintaining energetic protection after your session. Clients often report feeling lighter, calmer, and more centered."
+            id: 1,
+            title: "Reiki Energy Healing",
+            price: "$111",
+            img: "/images/IMG_7804_websize.jpg",
+            description: `I offer a quiet and safe space where you are invited to deeply relax, reconnect, and realign. Each session begins with a fifteen-minute consultation where we explore your current life state and I intuitively tune into your energy. From there we step forward into a meditative state of presence, gently opening the pathways of your mind, body, and spirit as I channel life-force energy through Reiki. Guided by intuitive gentle touch and ancestral wisdom to support, restore, and release.`,
+            calendly: "https://calendly.com/username",
         },
         {
-            title: "Aura Reading",
-            price: "$95",
-            image: service2Img,
-            short:
-                "Insight into your emotional, spiritual, and energetic state.",
-            full:
-                "During this reading we explore your energetic field, emotional blocks, intuitive messages, and patterns currently influencing your life path. You will leave with clarity and practical grounding suggestions."
+            id: 2,
+            title: "Chakra Bracelet Workshop",
+            price: "$44",
+            img: "/images/IMG_7774_websize.jpg",
+            description: `The Chakra Bracelet Workshop offers a welcoming, communal space for like-minded individuals on their healing journeys. You’ll receive foundational insight into how the chakra system functions on emotional and spiritual levels. Through guided reflection and shared storytelling, you create a personalized chakra bracelet, setting a clear intention for the chakra you wish to support and balance. Minimum 5 participants, max 10.`,
+            calendly: "https://calendly.com/username",
         },
         {
-            title: "Chakra Balancing",
-            price: "$110",
-            image: service3Img,
-            short:
-                "Realign and harmonize your body's energetic centers.",
-            full:
-                "Using guided intention, grounding techniques, and energy work, each chakra is gently balanced to restore flow. This session supports emotional stability, relaxation, and energetic alignment."
-        }
+            id: 3,
+            title: "Somatic Healing, TRE",
+            price: "$222",
+            img: "/images/IMG_8011_websize.jpg",
+            description: `Services coming soon. TRE™ (Tension & Trauma Releasing Exercises) is a body-based practice designed to help the body release deep patterns of stress, tension, and trauma. Late Spring/Early Summer 2026.`,
+            calendly: "https://calendly.com/username",
+        },
     ];
+
+    const [expanded, setExpanded] = useState({});
+
+    const toggleExpand = (id) => {
+        setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
+    };
 
     return (
         <div className="services-page">
-            <h1 className="services-title">Services</h1>
-
-            <div className="services-grid">
-                {services.map((service, index) => (
-                    <div className="service-card" key={index}>
-                        <img src={service.image} alt={service.title} />
-
-                        <h3>{service.title}</h3>
-                        <p className="price">{service.price}</p>
-
-                        <p className="preview">{service.short}</p>
-
-                        <div className={`full-text ${openIndex === index ? "open" : ""}`}>
-                            <p>{service.full}</p>
+            <h1>Our Services</h1>
+            <div className="services-container">
+                {services.map((service) => (
+                    <div key={service.id} className="service-card">
+                        <img src={service.img} alt={service.title} />
+                        <div className="service-content">
+                            <h2>{service.title}</h2>
+                            <p className="price">{service.price}</p>
+                            <div className="buttons-row">
+                                <a
+                                    href={service.calendly}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="book-button"
+                                >
+                                    Book Now
+                                </a>
+                                <button onClick={() => toggleExpand(service.id)} className="desc-button">
+                                    {expanded[service.id] ? "Hide" : "Read Full"}
+                                </button>
+                            </div>
+                            <p className={`description ${expanded[service.id] ? "expanded" : ""}`}>
+                                {service.description}
+                            </p>
                         </div>
-
-                        <button
-                            className="read-more"
-                            onClick={() => toggleCard(index)}
-                        >
-                            {openIndex === index
-                                ? "Hide description"
-                                : "Read full description"}
-                        </button>
-
-                        <a
-                            className="book-btn"
-                            href="https://calendly.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Book
-                        </a>
                     </div>
                 ))}
             </div>
