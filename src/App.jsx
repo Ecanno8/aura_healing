@@ -9,7 +9,7 @@ import Welcome from "./pages/Welcome";
 
 export default function App() {
     return (
-        <Router>
+        <Router basename="/aura_healing">
             <Navbar brand="Aura Healing" />
             <Routes>
                 <Route path="/" element={<HomePage />} />

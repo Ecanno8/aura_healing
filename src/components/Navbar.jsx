@@ -5,7 +5,9 @@ import "../styles/Navbar.css";
 export default function Navbar() {
     return (
         <nav className="navbar">
-            <Link to="/" className="brand">Aura Healing</Link>
+            <Link to="/" className="brand">
+                Aura Healing
+            </Link>
 
             <div className="nav-links">
                 <Link to="/">Home</Link>
