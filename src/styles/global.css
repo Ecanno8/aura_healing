@@ -3,22 +3,44 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     margin: 0;
     font-family: "Helvetica Neue", Arial, sans-serif;
-    background: #1f1c1a;
-    /* deep warm charcoal */
-    color: #e8ded4;
-    /* soft ivory text */
+
+    /* Main earthy foundation */
+    background: #2b211d;
+    /* deep cacao brown */
+    color: #cbb3a0;
+    /* warm clay text */
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optional subtle atmospheric overlay */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.08);
+    pointer-events: none;
 }
 
 /* ---------- Typography ---------- */
+
 h1,
 h2,
 h3 {
     font-weight: 500;
     letter-spacing: 0.5px;
-    color: #e8ded4;
+    color: #e8d6c7;
+    /* soft sand highlight */
+    margin: 0;
 }
 
 h1 {
@@ -39,36 +61,92 @@ h3 {
 p {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: #c9beb3;
-    /* softer muted body text */
+    color: #cbb3a0;
 }
 
 /* ---------- Layout spacing ---------- */
+
 .section {
     padding: 4rem 1.5rem;
 }
 
-/* Soft elevated sections */
+/* Soft layered sections (no harsh contrast) */
 .section-alt {
-    background: #2a2522;
-    /* card-like dark surface */
+    background: #362a25;
+    /* clay layer */
+    border-top: 1px solid #4a3a33;
+    border-bottom: 1px solid #4a3a33;
 }
 
 /* ---------- Container ---------- */
+
 .container {
     max-width: 1000px;
     margin: 0 auto;
 }
 
 /* ---------- Links ---------- */
+
 a {
-    color: #b39a84;
-    /* warm accent */
+    color: #c7a489;
+    /* muted copper */
     text-decoration: none;
     transition: 0.2s ease;
 }
 
 a:hover {
-    color: #8f7a66;
+    color: #e0b89a;
     text-decoration: underline;
+}
+
+/* ---------- Buttons (global base style) ---------- */
+
+button,
+.btn {
+    background: #4a3a33;
+    color: #e6d3c2;
+    border: 1px solid #5a473f;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+    background: #5a473f;
+    border-color: #6a5349;
+}
+
+/* ---------- Cards ---------- */
+
+.card {
+    background: #3b2f29;
+    border: 1px solid #4c3c34;
+    border-radius: 14px;
+    padding: 1.5rem;
+}
+
+/* ---------- Inputs (if you have forms) ---------- */
+
+input,
+textarea {
+    background: #3b2f29;
+    border: 1px solid #4c3c34;
+    color: #e6d3c2;
+    padding: 0.6rem;
+    border-radius: 8px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #c7a489;
+}
+
+/* ---------- Smooth text selection ---------- */
+
+::selection {
+    background: #5a473f;
+    color: #f1e3d6;
 }
