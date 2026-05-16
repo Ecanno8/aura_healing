@@ -1,7 +1,8 @@
 import React from "react";
 import "../styles/About.css";
 
-const aboutImg = "/images/IMG_7733_websize.jpg";
+// Vite-safe image import
+import aboutImg from "../assets/images/IMG_7733_websize.jpg";
 
 export default function AboutPage() {
     return (
@@ -11,10 +12,10 @@ export default function AboutPage() {
             <div className="about-left">
 
                 <div className="about-client-image">
-                    <img src={aboutImg} alt="Laura Agustina Castillo" />
+                    <img src={aboutImg} alt="Aura Healing About Image" />
                 </div>
 
-                {/* CONTACT CARD (NEW) */}
+                {/* CONTACT CARD */}
                 <div className="contact-card">
                     <h3>Connect with me</h3>
 
@@ -62,10 +63,12 @@ export default function AboutPage() {
                     young age. In turn, she gently nurtured those same qualities within me, planting those roots early in my own life as well.
                 </p>
 
-                <p><strong>
-                    What was once a story became an inheritance;<br />
-                    What was an inheritance became a devotion.
-                </strong></p>
+                <p>
+                    <strong>
+                        What was once a story became an inheritance;<br />
+                        What was an inheritance became a devotion.
+                    </strong>
+                </p>
 
                 <p>
                     As a modern healer, I walk as a bridge between generations, cultures, and ways of knowing.

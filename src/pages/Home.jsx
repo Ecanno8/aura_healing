@@ -2,6 +2,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
 
+// images (Vite-safe imports)
+import heroImg from "../assets/images/IMG_7802_websize.jpg";
+import welcomeImg from "../assets/images/reikismoke.jpg";
+import servicesImg from "../assets/images/reikirocks.jpg";
+
 export default function Home() {
     const navigate = useNavigate();
 
@@ -11,7 +16,7 @@ export default function Home() {
             {/* HERO PARALLAX */}
             <div
                 className="parallax hero"
-                style={{ backgroundImage: `url(/images/IMG_7802_websize.jpg)` }}
+                style={{ backgroundImage: `url(${heroImg})` }}
                 onClick={() => navigate("/welcome")}
             >
                 <div className="overlay">
@@ -23,7 +28,7 @@ export default function Home() {
             {/* WELCOME PARALLAX / ABOUT INTRO */}
             <div
                 className="parallax section"
-                style={{ backgroundImage: `url(/images/reikismoke.jpg)` }}
+                style={{ backgroundImage: `url(${welcomeImg})` }}
                 onClick={() => navigate("/about")}
             >
                 <div className="overlay">
@@ -32,10 +37,10 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* SERVICES PARALLAX (UPDATED IMAGE) */}
+            {/* SERVICES PARALLAX */}
             <div
                 className="parallax section"
-                style={{ backgroundImage: `url(/images/reikirocks.jpg)` }}
+                style={{ backgroundImage: `url(${servicesImg})` }}
                 onClick={() => navigate("/services")}
             >
                 <div className="overlay">

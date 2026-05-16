@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ServiceCard = ({ image, title, price, description }) => {
+const ServiceCard = ({ image, title, price, description, calendly }) => {
     const [expanded, setExpanded] = useState(false);
 
     const preview =
@@ -31,7 +31,13 @@ const ServiceCard = ({ image, title, price, description }) => {
                         {expanded ? "Show Less" : "Read More"}
                     </button>
 
-                    <a className="book-button" href="#">
+                    {/* FIXED: use real calendly link instead of "#" */}
+                    <a
+                        className="book-button"
+                        href={calendly}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Book Now
                     </a>
                 </div>
