@@ -6,8 +6,10 @@
 body {
     margin: 0;
     font-family: "Helvetica Neue", Arial, sans-serif;
-    background: #f3efe9;
-    color: #4b3f38;
+    background: #1f1c1a;
+    /* deep warm charcoal */
+    color: #e8ded4;
+    /* soft ivory text */
 }
 
 /* ---------- Typography ---------- */
@@ -16,7 +18,7 @@ h2,
 h3 {
     font-weight: 500;
     letter-spacing: 0.5px;
-    color: #3f332d;
+    color: #e8ded4;
 }
 
 h1 {
@@ -37,7 +39,8 @@ h3 {
 p {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: #4b3f38;
+    color: #c9beb3;
+    /* softer muted body text */
 }
 
 /* ---------- Layout spacing ---------- */
@@ -47,7 +50,8 @@ p {
 
 /* Soft elevated sections */
 .section-alt {
-    background: #e8e1d8;
+    background: #2a2522;
+    /* card-like dark surface */
 }
 
 /* ---------- Container ---------- */
@@ -58,12 +62,13 @@ p {
 
 /* ---------- Links ---------- */
 a {
-    color: #7c6a5f;
+    color: #b39a84;
+    /* warm accent */
     text-decoration: none;
     transition: 0.2s ease;
 }
 
 a:hover {
-    color: #5e4d45;
+    color: #8f7a66;
     text-decoration: underline;
 }
