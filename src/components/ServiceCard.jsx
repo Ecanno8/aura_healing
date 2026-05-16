@@ -1,13 +1,41 @@
+import { useState } from "react";
+
 const ServiceCard = ({ image, title, price, description }) => {
+    const [expanded, setExpanded] = useState(false);
+
+    const preview =
+        description && description.length > 120
+            ? description.slice(0, 120) + "..."
+            : description;
+
     return (
-        <div style={{ border: "1px solid #ccc", borderRadius: "8px", padding: "1rem", margin: "1rem", maxWidth: "400px" }}>
-            <img src={image} alt={title} style={{ width: "100%", borderRadius: "8px" }} />
-            <h3>{title}</h3>
-            <p><strong>Price:</strong> {price}</p>
-            <p>{description}</p>
-            <button style={{ marginTop: "1rem", padding: "0.5rem 1rem", backgroundColor: "#6f4a8e", color: "#fff", border: "none", borderRadius: "4px" }}>
-                Book Now
-            </button>
+        <div className="service-card">
+            <img src={image} alt={title} />
+
+            <div className="service-content">
+                <h2>{title}</h2>
+
+                <p className="price">
+                    <strong>Price:</strong> {price}
+                </p>
+
+                <p className={`description ${expanded ? "expanded" : ""}`}>
+                    {expanded ? description : preview}
+                </p>
+
+                <div className="buttons-row">
+                    <button
+                        className="desc-button"
+                        onClick={() => setExpanded(!expanded)}
+                    >
+                        {expanded ? "Show Less" : "Read More"}
+                    </button>
+
+                    <a className="book-button" href="#">
+                        Book Now
+                    </a>
+                </div>
+            </div>
         </div>
     );
 };

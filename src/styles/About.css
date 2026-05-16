@@ -49,3 +49,45 @@
         margin-bottom: 20px;
     }
 }
+
+.about-client-container {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.about-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-client-text {
+    flex: 2;
+    min-width: 300px;
+    line-height: 1.8;
+}
+
+.about-client-image img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.contact-card {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f5f3f0;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.book-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #7a6c5d;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}

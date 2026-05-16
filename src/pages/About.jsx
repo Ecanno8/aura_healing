@@ -6,30 +6,34 @@ const aboutImg = "/images/IMG_7733_websize.jpg";
 export default function AboutPage() {
     return (
         <div className="about-client-container">
-            <div className="about-client-image">
-                <img src={aboutImg} alt="Laura Agustina Castillo" />
+
+            {/* IMAGE + CONTACT SECTION */}
+            <div className="about-left">
+
+                <div className="about-client-image">
+                    <img src={aboutImg} alt="Laura Agustina Castillo" />
+                </div>
+
+                {/* CONTACT CARD (NEW) */}
+                <div className="contact-card">
+                    <h3>Connect with me</h3>
+
+                    <p>Email: healing.aura888@gmail.com</p>
+
+                    <a
+                        href="https://calendly.com/healing-aura888"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="book-button"
+                    >
+                        Book a Session
+                    </a>
+                </div>
+
             </div>
+
+            {/* TEXT CONTENT */}
             <div className="about-client-text">
-                <p>
-                    My name is Laura Agustina Castillo. I stand rooted in the lineage of several generations of
-                    healers. In this modern world, I carry forward the sacred gifts of my ancestors—integrating
-                    traditional wisdom rooted in indigenous knowledge with healing modalities that nurture the mind,
-                    body, and spirit.
-                </p>
-
-                <p>
-                    My work weaves together ancestral healing traditions from my father’s lineage, Reiki and
-                    somatic practices. I am devoted to providing grounded, compassionate guidance rooted in
-                    tradition and adapted for the modern world.
-                </p>
-
-                <p><strong>
-                    This is more than a practice.<br />
-                    It is a legacy.<br />
-                    It is devotion.<br />
-                    It is a return to wholeness.
-                </strong></p>
-
                 <p>
                     I am the first born daughter of immigrant parents, a bridge between generations, cultures, and worlds.
                 </p>
@@ -81,7 +85,9 @@ export default function AboutPage() {
                     I offer a container that is intuitive yet embodied, ancestral yet attuned to the present. Where healing is not rushed,
                     but remembered.
                 </p>
+
             </div>
+
         </div>
     );
 }

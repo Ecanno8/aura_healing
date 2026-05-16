@@ -8,43 +8,41 @@ export default function Home() {
     return (
         <div className="home-container">
 
-            {/* Parallax Hero */}
+            {/* HERO PARALLAX */}
             <div
                 className="parallax hero"
                 style={{ backgroundImage: `url(/images/IMG_7802_websize.jpg)` }}
-                onClick={() => navigate("/about")}
+                onClick={() => navigate("/welcome")}
             >
                 <div className="overlay">
-                    <h1>Welcome to Aura Healing</h1>
+                    <h1>Aura Healing</h1>
                     <p>Where ancestral wisdom meets modern healing</p>
                 </div>
             </div>
 
-            {/* About Section */}
+            {/* WELCOME PARALLAX / ABOUT INTRO */}
             <div
                 className="parallax section"
-                style={{ backgroundImage: `url(/images/IMG_7733_websize.jpg)` }}
+                style={{ backgroundImage: `url(/images/reikismoke.jpg)` }}
                 onClick={() => navigate("/about")}
             >
                 <div className="overlay">
-                    <h2>About Laura</h2>
-                    <p>Learn about Laura’s lineage and healing journey</p>
+                    <h2>I welcome you to Aura’s Healing space.</h2>
+                    <p>Click below to continue your journey</p>
                 </div>
             </div>
 
-            {/* Services Section */}
+            {/* SERVICES PARALLAX (UPDATED IMAGE) */}
             <div
                 className="parallax section"
-                style={{ backgroundImage: `url(/images/IMG_7804_websize.jpg)` }}
+                style={{ backgroundImage: `url(/images/reikirocks.jpg)` }}
                 onClick={() => navigate("/services")}
             >
                 <div className="overlay">
                     <h2>Our Services</h2>
-                    <p>Explore Reiki, Chakra Workshops, and Somatic Healing</p>
+                    <p>Reiki • Somatic Healing • Chakra Work</p>
                 </div>
             </div>
-
-
 
         </div>
     );

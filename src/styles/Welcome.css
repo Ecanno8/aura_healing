@@ -1,0 +1,63 @@
+.welcome-page {
+    padding: 6rem 2rem;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, #faf7f2, #f3eee7);
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.welcome-container {
+    max-width: 750px;
+    width: 100%;
+    color: #2c2c2c;
+    padding: 3rem 2.5rem;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Title */
+.welcome-container h1 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #4a3c31;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+}
+
+/* Paragraph styling */
+.welcome-container p {
+    margin-bottom: 1.4rem;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #3a3a3a;
+}
+
+/* Strong emphasis lines */
+.welcome-container strong {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #4a3c31;
+    margin: 1.2rem 0;
+    letter-spacing: 0.5px;
+}
+
+/* Signature */
+.welcome-container p:last-child {
+    text-align: center;
+    margin-top: 2rem;
+    font-style: italic;
+    color: #5a4a3f;
+}
+
+.welcome-image {
+    width: 100%;
+    max-width: 520px;
+    display: block;
+    margin: 1.5rem auto 2.5rem auto;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+    object-fit: cover;
+}
