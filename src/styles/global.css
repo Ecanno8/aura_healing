@@ -1,4 +1,4 @@
-/* ---------- Base Reset ---------- */
+/* ---------- Reset ---------- */
 * {
     box-sizing: border-box;
 }
@@ -12,22 +12,19 @@ body {
     margin: 0;
     font-family: "Helvetica Neue", Arial, sans-serif;
 
-    /* Main earthy foundation */
-    background: #2b211d;
-    /* deep cacao brown */
-    color: #cbb3a0;
-    /* warm clay text */
+    background: #322823;
+    color: #d2b9a8;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Optional subtle atmospheric overlay */
+/* subtle atmospheric depth */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.08);
+    background: rgba(0, 0, 0, 0.05);
     pointer-events: none;
 }
 
@@ -37,9 +34,8 @@ h1,
 h2,
 h3 {
     font-weight: 500;
-    letter-spacing: 0.5px;
-    color: #e8d6c7;
-    /* soft sand highlight */
+    letter-spacing: 0.4px;
+    color: #f0dfd2;
     margin: 0;
 }
 
@@ -59,94 +55,134 @@ h3 {
 }
 
 p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #cbb3a0;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #d2b9a8;
+    margin-bottom: 1rem;
 }
 
-/* ---------- Layout spacing ---------- */
+/* ---------- Layout ---------- */
 
 .section {
-    padding: 4rem 1.5rem;
+    padding: 5rem 1.5rem;
 }
 
-/* Soft layered sections (no harsh contrast) */
+/* soft layered section */
 .section-alt {
-    background: #362a25;
-    /* clay layer */
-    border-top: 1px solid #4a3a33;
-    border-bottom: 1px solid #4a3a33;
+    background: #3a2f29;
+    border-top: 1px solid #4b3c35;
+    border-bottom: 1px solid #4b3c35;
 }
 
 /* ---------- Container ---------- */
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 /* ---------- Links ---------- */
 
 a {
-    color: #c7a489;
-    /* muted copper */
+    color: #d0a98a;
     text-decoration: none;
     transition: 0.2s ease;
 }
 
 a:hover {
-    color: #e0b89a;
+    color: #e7c2a6;
     text-decoration: underline;
 }
 
-/* ---------- Buttons (global base style) ---------- */
+/* ---------- Buttons ---------- */
 
 button,
 .btn {
-    background: #4a3a33;
-    color: #e6d3c2;
-    border: 1px solid #5a473f;
-    padding: 0.6rem 1.2rem;
-    border-radius: 8px;
+    display: inline-block;
+    background: #4b3c35;
+    color: #f0dfd2;
+    border: 1px solid #5a4840;
+    padding: 0.7rem 1.3rem;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s ease;
+    font-size: 1rem;
 }
 
 button:hover,
 .btn:hover {
-    background: #5a473f;
+    background: #5a4840;
     border-color: #6a5349;
+    transform: translateY(-1px);
+}
+
+button:active,
+.btn:active {
+    transform: translateY(0px);
 }
 
 /* ---------- Cards ---------- */
 
 .card {
-    background: #3b2f29;
-    border: 1px solid #4c3c34;
-    border-radius: 14px;
+    background: #42352e;
+    border: 1px solid #54433b;
+    border-radius: 16px;
     padding: 1.5rem;
+    transition: all 0.2s ease;
 }
 
-/* ---------- Inputs (if you have forms) ---------- */
+.card:hover {
+    transform: translateY(-2px);
+    border-color: #6a5349;
+}
+
+/* ---------- Inputs ---------- */
 
 input,
 textarea {
-    background: #3b2f29;
-    border: 1px solid #4c3c34;
-    color: #e6d3c2;
-    padding: 0.6rem;
-    border-radius: 8px;
+    width: 100%;
+    background: #42352e;
+    border: 1px solid #54433b;
+    color: #f0dfd2;
+    padding: 0.75rem;
+    border-radius: 10px;
     outline: none;
+    font-size: 1rem;
 }
 
 input:focus,
 textarea:focus {
-    border-color: #c7a489;
+    border-color: #d0a98a;
+    box-shadow: 0 0 0 2px rgba(208, 169, 138, 0.15);
 }
 
-/* ---------- Smooth text selection ---------- */
+/* ---------- Layout helpers ---------- */
+
+.flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* ---------- Section spacing refinement ---------- */
+
+.section+.section {
+    margin-top: 1rem;
+}
+
+/* ---------- Selection ---------- */
 
 ::selection {
-    background: #5a473f;
-    color: #f1e3d6;
+    background: #5a4840;
+    color: #fff1e6;
 }

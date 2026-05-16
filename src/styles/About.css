@@ -11,7 +11,8 @@
     font-family: "Helvetica Neue", Arial, sans-serif;
     line-height: 1.8;
 
-    color: #4b3f38;
+    color: #d2b9a8;
+    /* unified with global text */
     background: transparent;
 }
 
@@ -27,10 +28,12 @@
     max-width: 420px;
     height: auto;
 
-    border-radius: 12px;
+    border-radius: 16px;
     object-fit: cover;
 
-    box-shadow: 0 6px 18px rgba(63, 51, 45, 0.12);
+    /* softer earthy shadow instead of harsh black */
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+    border: 1px solid #4b3c35;
 }
 
 /* TEXT */
@@ -42,50 +45,59 @@
 .about-client-text p {
     margin-bottom: 18px;
     font-size: 1.05rem;
-    color: #4b3f38;
+    line-height: 1.75;
+    color: #d2b9a8;
 }
 
 /* EMPHASIS TEXT */
 .about-client-text strong {
     font-size: 1.15rem;
-    color: #3f332d;
+    color: #f0dfd2;
+    /* lifted highlight tone */
 }
 
-/* CONTACT CARD */
+/* CONTACT CARD (FIXED) */
 .contact-card {
     margin-top: 20px;
     padding: 20px;
 
-    background: #e8e1d8;
-    border-radius: 12px;
+    background: #3a2f29;
+    /* matches section-alt */
+    border: 1px solid #4b3c35;
+    border-radius: 14px;
 
     text-align: center;
 
-    color: #4b3f38;
+    color: #d2b9a8;
 }
 
+/* CONTACT TITLE */
 .contact-card h3 {
-    color: #3f332d;
+    color: #f0dfd2;
     margin-bottom: 10px;
 }
 
-/* BOOK BUTTON (MATCHES GLOBAL SYSTEM) */
+/* BOOK BUTTON (now aligned with global system) */
 .book-button {
     display: inline-block;
     margin-top: 12px;
     padding: 10px 20px;
 
-    background: #7c6a5f;
-    color: #f7f5f2;
+    background: #4b3c35;
+    color: #f0dfd2;
 
-    border-radius: 8px;
+    border: 1px solid #5a4840;
+    border-radius: 10px;
+
     text-decoration: none;
 
-    transition: 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .book-button:hover {
-    background: #5e4d45;
+    background: #5a4840;
+    border-color: #6a5349;
+    transform: translateY(-1px);
 }
 
 /* MOBILE */

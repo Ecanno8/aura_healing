@@ -5,11 +5,13 @@
 
     padding: 1rem 2rem;
 
-    background: rgba(243, 239, 233, 0.85);
+    /* earthy glass background (NOT ivory anymore) */
+    background: rgba(58, 47, 41, 0.75);
+
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
-    border-bottom: 1px solid rgba(124, 106, 95, 0.2);
+    border-bottom: 1px solid #4b3c35;
 
     position: sticky;
     top: 0;
@@ -20,7 +22,9 @@
 .navbar .brand {
     font-size: 1.8rem;
     font-weight: 500;
-    color: #3f332d;
+
+    color: #f0dfd2;
+
     text-decoration: none;
     letter-spacing: 0.5px;
 }
@@ -30,7 +34,8 @@
     margin-left: 1.5rem;
     text-decoration: none;
 
-    color: #4b3f38;
+    color: #d2b9a8;
+
     font-weight: 500;
 
     position: relative;
@@ -39,10 +44,10 @@
 
 /* HOVER STATE */
 .navbar .nav-links a:hover {
-    color: #7c6a5f;
+    color: #e7c2a6;
 }
 
-/* SUBTLE UNDERLINE ANIMATION */
+/* UNDERLINE ANIMATION */
 .navbar .nav-links a::after {
     content: "";
     position: absolute;
@@ -52,7 +57,7 @@
     width: 0%;
     height: 1px;
 
-    background: #7c6a5f;
+    background: #d0a98a;
 
     transition: width 0.25s ease;
 }
