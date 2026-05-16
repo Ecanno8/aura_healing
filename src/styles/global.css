@@ -180,6 +180,32 @@ textarea:focus {
     margin-top: 1rem;
 }
 
+/* ---------- FOOTER (FINAL GROUNDING LAYER) ---------- */
+
+.footer {
+    background: #694e42;
+    /* deepest clay anchor */
+    color: #cbb3a0;
+
+    padding: 3rem 1.5rem;
+    margin-top: 3rem;
+
+    text-align: center;
+
+    border-top: 1px solid #4b3c35;
+}
+
+.footer p {
+    margin: 0.4rem 0;
+    color: #cbb3a0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer p:first-child {
+    color: #f0dfd2;
+}
+
 /* ---------- Selection ---------- */
 
 ::selection {

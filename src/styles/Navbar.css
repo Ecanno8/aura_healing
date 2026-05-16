@@ -5,28 +5,33 @@
 
     padding: 1rem 2rem;
 
-    /* earthy glass background (NOT ivory anymore) */
-    background: rgba(58, 47, 41, 0.75);
+    /* slightly lifted clay tone so it separates from body */
+    background: rgba(66, 52, 45, 0.62);
 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
-    border-bottom: 1px solid #4b3c35;
+    /* clearer separation line */
+    border-bottom: 1px solid rgba(90, 72, 64, 0.55);
 
     position: sticky;
     top: 0;
     z-index: 10;
+
+    transition: all 0.2s ease;
+
+    /* subtle depth so it floats instead of blends */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* BRAND */
 .navbar .brand {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 500;
 
     color: #f0dfd2;
-
-    text-decoration: none;
     letter-spacing: 0.5px;
+    text-decoration: none;
 }
 
 /* LINKS */
@@ -36,32 +41,10 @@
 
     color: #d2b9a8;
 
-    font-weight: 500;
-
-    position: relative;
     transition: 0.2s ease;
 }
 
-/* HOVER STATE */
+/* HOVER */
 .navbar .nav-links a:hover {
     color: #e7c2a6;
-}
-
-/* UNDERLINE ANIMATION */
-.navbar .nav-links a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-
-    width: 0%;
-    height: 1px;
-
-    background: #d0a98a;
-
-    transition: width 0.25s ease;
-}
-
-.navbar .nav-links a:hover::after {
-    width: 100%;
 }
