@@ -67,7 +67,6 @@ p {
     padding: 5rem 1.5rem;
 }
 
-/* soft layered section */
 .section-alt {
     background: #3a2f29;
     border-top: 1px solid #4b3c35;
@@ -94,31 +93,69 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ---------- Buttons ---------- */
+/* =========================================================
+   🎯 CLEAN UNIFIED BUTTON SYSTEM (ONLY SYSTEM USED NOW)
+   ========================================================= */
 
 button,
-.btn {
-    display: inline-block;
+.btn,
+.book-button,
+.desc-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 44px;
+
+    padding: 0.75rem 1rem;
+    margin: 0;
+
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    box-sizing: border-box;
+
+    transition: all 0.2s ease;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* ---------- PRIMARY BUTTON (Book) ---------- */
+button,
+.btn,
+.book-button {
     background: #4b3c35;
     color: #f0dfd2;
     border: 1px solid #5a4840;
-    padding: 0.7rem 1.3rem;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-size: 1rem;
 }
 
 button:hover,
-.btn:hover {
+.btn:hover,
+.book-button:hover {
     background: #5a4840;
     border-color: #6a5349;
     transform: translateY(-1px);
 }
 
-button:active,
-.btn:active {
-    transform: translateY(0px);
+/* ---------- SECONDARY BUTTON (Read More) ---------- */
+.desc-button {
+    background: transparent;
+    border: 1px solid #5a4840;
+    color: #d2b9a8;
+}
+
+.desc-button:hover {
+    background: #5a4840;
+    color: #f0dfd2;
 }
 
 /* ---------- Cards ---------- */
@@ -174,13 +211,7 @@ textarea:focus {
     gap: 1.5rem;
 }
 
-/* ---------- Section spacing refinement ---------- */
-
-.section+.section {
-    margin-top: 1rem;
-}
-
-/* ---------- NAVBAR (soft floating clay glass) ---------- */
+/* ---------- NAVBAR ---------- */
 
 .navbar {
     display: flex;
@@ -221,12 +252,10 @@ textarea:focus {
     color: #e7c2a6;
 }
 
-/* ---------- FOOTER (grounding clay base) ---------- */
+/* ---------- FOOTER ---------- */
 
 .footer {
     background: #3a2e28;
-    /* matches navbar family, slightly deeper */
-
     color: #cbb3a0;
 
     padding: 3rem 1.5rem;
