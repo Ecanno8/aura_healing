@@ -2,92 +2,101 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: 35px;
-    /* slightly larger gap for bigger image */
-    max-width: 1100px;
-    /* wider container */
-    margin: 0 auto;
-    padding: 25px;
-    font-family: 'Georgia', serif;
-    line-height: 1.75;
-    color: #333;
-}
-
-.about-client-image img {
-    width: 400px;
-    /* slightly bigger image */
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
-}
-
-.about-client-text {
-    flex: 1;
-    min-width: 300px;
-}
-
-.about-client-text p {
-    margin-bottom: 18px;
-    font-size: 16px;
-}
-
-.about-client-text strong {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #111;
-}
-
-@media (max-width: 768px) {
-    .about-client-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-client-image {
-        margin-bottom: 20px;
-    }
-}
-
-.about-client-container {
-    display: flex;
     gap: 40px;
+
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 40px;
-    flex-wrap: wrap;
+
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.8;
+
+    color: #4b3f38;
+    background: transparent;
 }
 
+/* LEFT SIDE */
 .about-left {
     flex: 1;
     min-width: 300px;
 }
 
+/* IMAGE */
+.about-client-image img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+
+    border-radius: 12px;
+    object-fit: cover;
+
+    box-shadow: 0 6px 18px rgba(63, 51, 45, 0.12);
+}
+
+/* TEXT */
 .about-client-text {
     flex: 2;
     min-width: 300px;
-    line-height: 1.8;
 }
 
-.about-client-image img {
-    width: 100%;
-    border-radius: 12px;
-    object-fit: cover;
+.about-client-text p {
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+    color: #4b3f38;
 }
 
+/* EMPHASIS TEXT */
+.about-client-text strong {
+    font-size: 1.15rem;
+    color: #3f332d;
+}
+
+/* CONTACT CARD */
 .contact-card {
     margin-top: 20px;
     padding: 20px;
-    background: #f5f3f0;
+
+    background: #e8e1d8;
     border-radius: 12px;
+
     text-align: center;
+
+    color: #4b3f38;
 }
 
+.contact-card h3 {
+    color: #3f332d;
+    margin-bottom: 10px;
+}
+
+/* BOOK BUTTON (MATCHES GLOBAL SYSTEM) */
 .book-button {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 12px;
     padding: 10px 20px;
-    background: #7a6c5d;
-    color: white;
+
+    background: #7c6a5f;
+    color: #f7f5f2;
+
     border-radius: 8px;
     text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.book-button:hover {
+    background: #5e4d45;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .about-client-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .about-client-image img {
+        max-width: 100%;
+    }
 }

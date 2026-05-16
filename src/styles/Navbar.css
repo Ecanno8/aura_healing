@@ -2,23 +2,61 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.9);
+
+    background: rgba(243, 239, 233, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(124, 106, 95, 0.2);
+
     position: sticky;
     top: 0;
     z-index: 10;
 }
 
+/* BRAND */
 .navbar .brand {
     font-size: 1.8rem;
-    font-weight: bold;
-    color: #4a3c31;
+    font-weight: 500;
+    color: #3f332d;
     text-decoration: none;
+    letter-spacing: 0.5px;
 }
 
+/* LINKS */
 .navbar .nav-links a {
     margin-left: 1.5rem;
     text-decoration: none;
-    color: #4a3c31;
+
+    color: #4b3f38;
     font-weight: 500;
+
+    position: relative;
+    transition: 0.2s ease;
+}
+
+/* HOVER STATE */
+.navbar .nav-links a:hover {
+    color: #7c6a5f;
+}
+
+/* SUBTLE UNDERLINE ANIMATION */
+.navbar .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+
+    width: 0%;
+    height: 1px;
+
+    background: #7c6a5f;
+
+    transition: width 0.25s ease;
+}
+
+.navbar .nav-links a:hover::after {
+    width: 100%;
 }
