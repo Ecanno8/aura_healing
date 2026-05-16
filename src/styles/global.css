@@ -180,11 +180,53 @@ textarea:focus {
     margin-top: 1rem;
 }
 
-/* ---------- FOOTER (FINAL GROUNDING LAYER) ---------- */
+/* ---------- NAVBAR (soft floating clay glass) ---------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 2rem;
+
+    background: rgba(66, 52, 45, 0.62);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(90, 72, 64, 0.55);
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.navbar .brand {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #f0dfd2;
+    text-decoration: none;
+}
+
+.navbar .nav-links a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #d2b9a8;
+    transition: 0.2s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #e7c2a6;
+}
+
+/* ---------- FOOTER (grounding clay base) ---------- */
 
 .footer {
-    background: #694e42;
-    /* deepest clay anchor */
+    background: #3a2e28;
+    /* matches navbar family, slightly deeper */
+
     color: #cbb3a0;
 
     padding: 3rem 1.5rem;
@@ -192,7 +234,7 @@ textarea:focus {
 
     text-align: center;
 
-    border-top: 1px solid #4b3c35;
+    border-top: 1px solid rgba(90, 72, 64, 0.55);
 }
 
 .footer p {
